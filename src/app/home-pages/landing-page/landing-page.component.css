@@ -1,0 +1,12 @@
+.d-table-cell{
+  background-color: #00000033;
+}
+.feature_item img{
+  height: 100px;
+}
+.clientPic{
+  height: 200px;
+}
+.owl-theme .owl-dots .owl-dot span {
+   height: 0 !important;
+}
