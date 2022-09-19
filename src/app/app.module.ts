@@ -11,7 +11,7 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home-pages/home-pages.module').then(m => m.HomePagesModule)
   },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({
@@ -20,7 +20,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, {useHash: true}),
     BrowserAnimationsModule
   ],
   providers: [],
