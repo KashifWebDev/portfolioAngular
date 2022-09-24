@@ -11,25 +11,11 @@ import {ProjectService} from "../../project.service";
 })
 export class LandingPageComponent implements OnInit {
 
-  clients: client[] = [];
-  testimonials: testimonial[] = [];
-  projects: project[] = [];
-  projectTypes: string[] = [];
-  testimonialSliderOptions: OwlOptions = {};
-  colors: string[] = ["primary", "secondary", "success", "danger", "dark"];
 
-  constructor(private service: ProjectService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.clients = this.service.getClients();
-    this.testimonials = this.service.getTestimonials();
-    this.projects = this.service.getProjects();
-    this.testimonialSliderOptions = this.service.testimonialSliderOptions();
-    this.projectTypes = this.service.getProjectsTypes();
   }
 
-  RandomTagColor(){
-    return 'bg-' + this.colors[Math.floor(Math.random() * this.colors.length)];
-    }
 
 }

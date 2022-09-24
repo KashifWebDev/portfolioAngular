@@ -1,0 +1,118 @@
+<div class="testimonial_area section_gap_bottom">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <div class="main_title">
+          <h2>client say about me</h2>
+          <p>We are very fortunate to have formed excellent partnerships with many of our clients. And we’ve formed more than just working relationships with them; we have formed true friendships.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row w-100 text-center mx-auto">
+      <owl-carousel-o [options]="testimonialSliderOptions" class="w-100">
+        <ng-container *ngFor="let testimonial of testimonials">
+          <ng-template carouselSlide>
+            <div class="testi_item">
+              <div class="row">
+                <div class="col-lg-4">
+                  <img [src]="'assets/img/testimonials/'+testimonial.clientPic" alt="" class="clientPic">
+                </div>
+                <div class="col-lg-8">
+                  <div class="testi_text">
+                    <h4>{{testimonial.clientName}}</h4>
+                    <p>{{testimonial.feedback}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+    </div>
+    <div class="row">
+      <!--
+      <div class="testi_slider owl-carousel">
+              <div class="testi_item">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img src="assets/img/testimonials/t1.jpg" alt="">
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="testi_text">
+                      <h4>Elite Martin</h4>
+                      <p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testi_item">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img src="assets/img/testimonials/t2.jpg" alt="">
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="testi_text">
+                      <h4>Davil Saden</h4>
+                      <p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testi_item">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img src="assets/img/testimonials/t1.jpg" alt="">
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="testi_text">
+                      <h4>Elite Martin</h4>
+                      <p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testi_item">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img src="assets/img/testimonials/t2.jpg" alt="">
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="testi_text">
+                      <h4>Davil Saden</h4>
+                      <p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testi_item">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img src="assets/img/testimonials/t1.jpg" alt="">
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="testi_text">
+                      <h4>Elite Martin</h4>
+                      <p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testi_item">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img src="assets/img/testimonials/t2.jpg" alt="">
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="testi_text">
+                      <h4>Davil Saden</h4>
+                      <p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      -->
+
+    </div>
+  </div>
+</div>

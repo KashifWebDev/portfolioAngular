@@ -3,24 +3,31 @@ import { CommonModule } from '@angular/common';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
-import {CarouselModule} from "ngx-owl-carousel-o";
 import {SharedModule} from "../shared/shared.module";
 import {RouterModule, Routes} from "@angular/router";
+import { AboutComponent } from './about/about.component';
+import { ServicesComponent } from './services/services.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: LandingPageComponent
-  },
+  {path: '', component: LandingPageComponent},
+  {path: 'about', component: AboutComponent},
+  {path: 'services', component: ServicesComponent},
+  {path: 'portfolio', component: PortfolioComponent},
+  {path: 'contact', component: ContactComponent},
 ];
 
 @NgModule({
   declarations: [
-    LandingPageComponent
+    LandingPageComponent,
+    AboutComponent,
+    ServicesComponent,
+    PortfolioComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
-    CarouselModule,
     SharedModule,
     RouterModule.forChild(routes)
   ]
