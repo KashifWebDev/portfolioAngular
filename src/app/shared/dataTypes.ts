@@ -7,6 +7,7 @@ export interface testimonial {
   feedback: string
 }
 export interface project {
+  id: number,
   heading: string,
   coverPic: string,
   tags: string[],

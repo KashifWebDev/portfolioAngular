@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'services', component: ServicesComponent},
   {path: 'portfolio', component: PortfolioComponent},
   {path: 'contact', component: ContactComponent},
+  {path: 'project/:id', component: ProjectDetailComponent},
 ];
 
 @NgModule({
@@ -24,7 +26,8 @@ const routes: Routes = [
     AboutComponent,
     ServicesComponent,
     PortfolioComponent,
-    ContactComponent
+    ContactComponent,
+    ProjectDetailComponent
   ],
   imports: [
     CommonModule,

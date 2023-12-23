@@ -6,12 +6,11 @@ import {RouterModule, Routes} from "@angular/router";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 const routes: Routes = [
-  { path: '', redirectTo: '/welcome', pathMatch: 'full' },
   {
-    path: 'welcome',
+    path: '',
     loadChildren: () => import('./home-pages/home-pages.module').then(m => m.HomePagesModule)
   },
-  { path: '**', redirectTo: 'welcome' }
+  { path: '**', redirectTo: '404' }
 ];
 
 @NgModule({

@@ -14,12 +14,20 @@ export class RecentWorkComponent implements OnInit {
   projectTypes: string[] = [];
   constructor(private service: ProjectService) { }
 
+  tagColors: string[][] = [];
+
   ngOnInit(): void {
     this.projects = this.service.getProjects();
     this.projectTypes = this.service.getProjectsTypes();
+
+    // Generate random colors for each project tag
+    this.projects.forEach(project => {
+      const colors: string[] = project.tags.map(tag => this.service.getRandomBadge(1));
+      this.tagColors.push(colors);
+    });
   }
 
-  RandomTagColor(){
-    return 'bg-danger'
+  RandomTagColor(): string{
+    return this.service.getRandomBadge(1);
   }
 }
