@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {project} from "../dataTypes";
 import {ProjectService} from "../../project.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-recent-work',
@@ -12,7 +13,7 @@ export class RecentWorkComponent implements OnInit {
   colors: string[] = ["primary", "secondary", "success", "danger", "dark"];
   projects: project[] = [];
   projectTypes: string[] = [];
-  constructor(private service: ProjectService) { }
+  constructor(private service: ProjectService, private router: Router) { }
 
   tagColors: string[][] = [];
 
@@ -29,5 +30,9 @@ export class RecentWorkComponent implements OnInit {
 
   RandomTagColor(): string{
     return this.service.getRandomBadge(1);
+  }
+
+  generateProjectURL(project: project){
+    this.router.navigate(['/', 'project', project.heading.toLowerCase().replace(/\s+/g, '-'),  project.id]);
   }
 }

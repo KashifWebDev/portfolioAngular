@@ -25,7 +25,7 @@
               <div class="single_portfolio">
                 <img class="img-fluid w-100" [src]="'assets/img/portfolio/'+project.coverPic" alt="" style="width: 350px !important;">
                 <div class="overlay"></div>
-                <a [routerLink]="['/', 'project', project.id]" class="img-gal">
+                <a (click)="generateProjectURL(project)" class="img-gal">
                   <div class="icon">
                     <span class="lnr lnr-cross"></span>
                   </div>
