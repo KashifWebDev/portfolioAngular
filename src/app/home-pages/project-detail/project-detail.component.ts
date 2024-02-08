@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { ProjectService } from "../../project.service";
 import { project } from "../../shared/dataTypes";
+import {Meta, Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-project-detail',
@@ -16,7 +17,9 @@ export class ProjectDetailComponent implements OnInit {
   @ViewChild('indicatorsList') indicatorsList: ElementRef | any;
 
   constructor(private route: ActivatedRoute,
-              private projectService: ProjectService) { }
+              private projectService: ProjectService,
+              private titleService: Title,
+              private metaTagService: Meta) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -24,6 +27,15 @@ export class ProjectDetailComponent implements OnInit {
       this.project = this.projectService.findProject(this.projectID);
       window.scrollTo(0, 0);
     });
+
+
+    this.titleService.setTitle(this.project.heading + "- Kashif Ali Rabbani | Full Stack Developer");
+    this.metaTagService.addTags([
+      { name: 'keywords', content: 'Full Stack Developer, Core PHP, Laravel, JavaScript, Angular, Web Application Development, Backend Development, Frontend Development, Web Development Solutions, International Clients, Industry Solutions, Custom Web Development, PHP Development, Laravel Development, JavaScript Development, Angular Development, Web Development Expert, Client Satisfaction, Professional Experience, Innovative Solutions' },
+      { name: 'robots', content: 'index, follow' },
+      { name: 'writer', content: 'Kashif Ali Rabbani' },
+      { charset: 'UTF-8' }
+    ]);
   }
 
   ngAfterViewInit(): void {

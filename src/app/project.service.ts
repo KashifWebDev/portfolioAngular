@@ -115,6 +115,24 @@ export class ProjectService {
       website: "Private Server",
       type: projectType.php
     },
+    {
+      id: 8,
+      heading: 'Sebenza - All-in-One Business Management Platform',
+      tags: ['Angular', 'TypeScript', 'Laravel', 'Git', 'Bootstrap'],
+      coverPic: 'sebenza/1.png',
+      description: 'Sebenza is a comprehensive all-in-one business management platform designed to streamline and simplify your business operations. With Sebenza, you can manage every aspect of your business, from client relationships and project management to invoicing and accounting, all in one place. Whether you\'re a freelancer, small business owner, or enterprise, Sebenza provides the tools and features you need to increase efficiency, productivity, and profitability. Say goodbye to juggling multiple tools and platforms – Sebenza has you covered.',
+      pics: [
+        'sebenza/1.png',
+        'sebenza/2.png',
+        'sebenza/3.png',
+        'sebenza/4.png',
+        'sebenza/5.png',
+        'sebenza/6.png',
+        'sebenza/7.png'
+      ],
+      website: "Private Server",
+      type: projectType.php
+    },
   ];
 
   constructor() { }
